@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Uren Registratie Week Invoer</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Week Invoer</h1>
+    <div id="datumVandaag"></div>
+    <label>Week : </label>
+    <input type="number" id="inpWeek" onchange="writeTable2()">
+    <table>
+      <caption>Week overzicht</caption>
+      <tr>
+      <th>
+        Datum
+      </th>
+      <th>
+        Begintijd
+      </th>
+      <th>
+        Eindtijd
+      </th>
+      <th>
+        Pauze
+      </th>
+      <th>
+        Uren
+      </th>
+      <th>
+        Bijz
+      </th>
+      </tr>
+      <tr id="dag0"></tr>
+      <tr id="dag1"></tr>
+      <tr id="dag2"></tr>
+      <tr id="dag3"></tr>
+      <tr id="dag4"></tr>
+      <tr id="dag5"></tr>
+      <tr id="dag6"></tr>
+      <tr>
+        <td colspan="7"></td>
+      </tr>
+      <tr>
+        <td class="totalen" colspan="2" id="dGewWeek">Gewerkt : 0.0</td>
+        <td class="totalen" colspan="2" id="dOverWeek">Overuren : 0.0</td>
+      </tr>
+      <tr>
+         <td><input class ="inputUren" id="inpDatum" type="text" placeholder="dd-MM-jj"></td>
+         <td><input id="inpBegin" class ="inputUren" type="text" placeholder="HH:mm"></td>
+         <td><input class ="inputUren" id="inpEind" type="text" placeholder="HH:mm"></td>
+         <td><input class ="inputUren" id="inpPauze" type="text" value="00:30"></td>
+         <td><input class ="inputUren" id="inpBijz" type="text" value="-"></td>
+      </tr>
+    </table>
+    <br>
+    <div id="testDiv"></div><br>
+    <button onclick="voegToe()">Voeg Toe</button>
+    <button onclick="loadDataFromJson()">Load Data</button>
+    <script src="sqlapp.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

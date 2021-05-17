@@ -1,0 +1,29 @@
+h1{
+  color: green;
+}
+table, th, td{
+  table-layout: fixed;
+  width: 600px;
+  padding: 0 10px 0 10px;
+  border: solid black 1px;
+}
+th, td{
+  width: 70px;
+  height: 25px;
+}
+th{
+  background-color:lightgrey;
+  font-weight: bold;
+}
+td{
+  font-size:14px;
+}
+#inpWeek{
+  width: 20px;
+}
+.inputUren{
+  width: 70px;
+}
+.totalen{
+  background-color:#c0c0c0;
+}
